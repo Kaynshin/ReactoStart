@@ -1,0 +1,8 @@
+exports[`Entry container should render Entry 1`] = `
+<div
+  className="Entry__container">
+  <h1>
+    Hello World!
+  </h1>
+</div>
+`;
