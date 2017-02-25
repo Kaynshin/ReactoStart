@@ -1,0 +1,87 @@
+{
+  "name": "DJO-React_Starter_Kit",
+  "version": "1.0.0",
+  "description": "React starter kit",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.js",
+    "test": "jest",
+    "clean": "rimraf tests/ build/bundle.js",
+    "lint": "eslint --ext .js,.jsx app",
+    "lintcss": "stylelint \"app/**/*.scss\"",
+    "build": "npm run lint && npm run lintcss && npm run test && webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaynshin/React-ShoppingBag.git"
+  },
+  "author": "David Jomain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kaynshin/React-ShoppingBag/issues"
+  },
+  "homepage": "https://github.com/Kaynshin/React-ShoppingBag#readme",
+  "dependencies": {
+    "classnames": "2.2.5",
+    "lodash": "4.13.1",
+    "react": "15.4.2",
+    "react-dom": "15.4.2",
+    "rimraf": "2.5.4"
+  },
+  "devDependencies": {
+    "babel": "6.5.2",
+    "babel-cli": "6.14.0",
+    "babel-core": "6.10.4",
+    "babel-jest": "17.0.2",
+    "babel-loader": "6.2.4",
+    "babel-plugin-transform-require-ignore": "0.0.2",
+    "babel-polyfill": "6.16.0",
+    "babel-preset-es2015": "6.9.0",
+    "babel-preset-react": "6.11.1",
+    "css-loader": "0.23.1",
+    "enzyme": "2.7.0",
+    "eslint": "2.13.1",
+    "eslint-config-airbnb": "9.0.1",
+    "eslint-import-resolver-webpack": "0.4.0",
+    "eslint-plugin-import": "1.10.3",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "5.2.2",
+    "ignore-loader": "0.1.1",
+    "imports-loader": "0.6.5",
+    "jest-cli": "17.0.3",
+    "jsdom": "9.8.3",
+    "json-loader": "0.5.4",
+    "node-sass": "3.8.0",
+    "react-addons-test-utils": "15.4.2",
+    "react-test-renderer": "15.4.2",
+    "sass-loader": "4.0.0",
+    "style-loader": "0.13.1",
+    "stylelint": "7.1.0",
+    "webpack": "1.13.1",
+    "webpack-babel-jest": "^1.0.4",
+    "webpack-dev-server": "1.14.1"
+  },
+  "jest": {
+    "verbose": true,
+    "testRegex": "(.*Specs.jsx?|specs.jsx?|snapshots.jsx)$",
+    "testPathDirs": [
+      "app"
+    ],
+    "coverageDirectory": "tests/coverage/components",
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json"
+    ],
+    "notify": true,
+    "transform": {
+      ".*": "<rootDir>/node_modules/webpack-babel-jest"
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "app/*.{js,jsx}",
+      "app/**/*.{js,jsx}",
+      "!app/index.js"
+    ]
+  }
+}
